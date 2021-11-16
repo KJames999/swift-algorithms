@@ -1,0 +1,11 @@
+//
+//  main.swift
+//  StandardAlgorithmsNew
+//
+//  Created by James, Killian (NA) on 16/11/2021.
+//
+
+import Foundation
+
+print("Hello, World!")
+
