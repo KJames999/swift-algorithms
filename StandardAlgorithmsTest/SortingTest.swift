@@ -91,4 +91,13 @@ class SortingTest: XCTestCase {
         }
     }
     
+    func testQuickSortPerformance() {
+        let sorting = Sorting()
+           let testArray = [41285,1246536,54,764,7,3,63,5,76,3866,352,41,56,3768,79,80,96,85746,73562,4513,4653,746857,986079,-608957,46837562,45134,546,2357468457,980679,85786,4536245,13]
+           //act
+           measure {
+            _ = sorting.quickSort(testArray)
+           }
+    }
+    
 }

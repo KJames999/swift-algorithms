@@ -100,57 +100,13 @@ class Sorting {
       return orderedArray
     }
     
-    func swap(_ input: inout [Int], _ posA: Int, _ posB: Int) {
-        var arr = input
-      if posA != posB {
-        let temp = arr[posA]
-        arr[posA] = arr[posB]
-        arr[posB] = temp
-      }
-    }
-
-    func partition(_ input: inout [Int], _ left: Int, _ right: Int) -> Int {
-        var arr = input
-      let pivot = left
-      var left = left
-      var right = right
-
-      while left < right {
-        while left < arr.count && arr[left] <= arr[pivot] {
-          left += 1
+    func quickSort<T: Comparable>(_ input: [T]) -> [T] {
+          guard input.count > 1 else { return input }
+          let pivot = input[input.count/2]
+          let less = input.filter { $0 < pivot }
+          let equal = input.filter { $0 == pivot }
+          let greater = input.filter { $0 > pivot }
+          return quickSort(less) + equal + quickSort(greater)
         }
-        while arr[right] > arr[pivot] {
-          right -= 1
-        }
-
-        if left < right {
-          swap(&arr, left, right)
-        }
-      }
-
-      swap(&arr, right, pivot)
-      return right
-    }
-
-    func quickSortHelper(
-      _ input: inout [Int],
-      _ left: Int,
-      _ right: Int) {
-        var arr = input
-      if left < right {
-        let pI = partition(&arr, left, right)
-        quickSortHelper(&arr, left, pI-1)
-        quickSortHelper(&arr, pI+1, right)
-      }
-    }
-
-    func sort(_ input: inout [Int]) {
-        var arr = input
-      quickSortHelper(&arr, 0, arr.count-1)
-    }
-    func quickSort(_ input: [Int]) {
-        var arr = input
-        sort(&arr)
-    }
 }
 
