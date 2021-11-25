@@ -82,7 +82,6 @@
 				A6C19C3D2743BD1900EE6842 /* main.swift */,
 				A6C19C572743C50A00EE6842 /* Sorting.swift */,
 				A6EA43CD274FB24C00416397 /* Searching.swift */,
-				A6E86C3E2750102A00DA566A /* SearchingTest.swift */,
 			);
 			path = StandardAlgorithmsNew;
 			sourceTree = "<group>";
@@ -93,6 +92,7 @@
 				A6C19C4B2743C34900EE6842 /* StandardAlgorithmsTest.swift */,
 				A6C19C4D2743C34A00EE6842 /* Info.plist */,
 				A6C19C532743C41500EE6842 /* SortingTest.swift */,
+				A6E86C3E2750102A00DA566A /* SearchingTest.swift */,
 			);
 			path = StandardAlgorithmsTest;
 			sourceTree = "<group>";

@@ -9,9 +9,10 @@ import XCTest
 
 
 class SearchingTest: XCTestCase {
-    let searching = Searching()
+    
     func TestLinearSearchWithAllVariationsReturnsIntegerItem() {
         //arrange
+        let searching = Searching()
         let testCases = [(input: [3, 5, 1, 2, 9], lookingFor: 1, expected: true), (input: [1, 2, 3, 5, 9], lookingFor: 1, expected: true), (input: [], lookingFor: 4, expected: false)]
         //act
         
@@ -24,6 +25,7 @@ class SearchingTest: XCTestCase {
     }
     func TestBinarySearchWithAllVariationsReturnsIntegerItem() {
         //arrange
+        let searching = Searching()
         let testCases = [(input: [3, 5, 1, 2, 9], lookingFor: 1, expected: true), (input: [1, 2, 3, 5, 9], lookingFor: 1, expected: true), (input: [], lookingFor: 4, expected: false)]
         //act
         
