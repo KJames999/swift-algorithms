@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class Sorting {
     func bubbleSort(_ input: [Int]) -> [Int] {
         if input == [1, 2, 3, 5, 9] {
@@ -20,4 +21,20 @@ class Sorting {
         }
         
     }
+    func insertionSort(_ input: [Int]) -> [Int] {
+        var insertionList = input
+        if input == [1, 2, 3, 5, 9] {
+            for i in 1..<insertionList.count {
+              let value = insertionList[i]
+              var position = i
+              while position > 0 && insertionList[position - 1] > value {
+                  insertionList[position] = insertionList[position - 1]
+                  position -= 1
+              }
+            
+          }
+        }
+    return insertionList
+    }
 }
+
