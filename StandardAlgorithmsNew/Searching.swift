@@ -8,10 +8,10 @@
 import Foundation
 
 class Searching {
-    func linearSearch(_ input: Int) -> Bool {
+    func linearSearch(_ input: [Int], lookingFor: Int) -> Bool {
       var linearFound = false
-      let linearList = [3, 8, 17, 25, 41, 54, 69, 80, 92, 99]
-        let linearNumber = input
+      let linearList = input
+        let linearNumber = lookingFor
       for i in 0...linearList.count - 1 {
         if linearNumber == linearList[i] {
           linearFound = true
@@ -23,12 +23,13 @@ class Searching {
       }
     return linearFound
     }
-    func binarySearch(_ input: Int) -> Bool {
-      let binaryList = [3, 8, 17, 25, 41, 54, 69, 80, 92, 99]
+    
+    func binarySearch(_ input: [Int], lookingFor: Int) -> Bool {
+      let binaryList = input
       var binaryFound = false
       var lowerBound = 0
       var upperBound = binaryList.count
-        let binaryNumber = input
+        let binaryNumber = lookingFor
       while lowerBound < upperBound {
         let midpoint = lowerBound + (upperBound - lowerBound) / 2
         if binaryList[midpoint] == binaryNumber {

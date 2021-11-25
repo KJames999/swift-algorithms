@@ -10,16 +10,27 @@ import Foundation
 
 class Sorting {
     func bubbleSort(_ input: [Int]) -> [Int] {
-        if input == [1, 2, 3, 5, 9] {
-            return input
+      var array = input
+        if array.count == 0 {
+            return []
         } else {
-            if input.count == 0 {
-                return []
-            } else {
-                return [1, 2, 3, 5, 9]
+            let end = array.count - 1
+            var swap = true
+            while swap == true {
+              swap = false
+              for i in 0..<end {
+                if array[i] > array[i + 1] {
+                  let holder = array[i + 1]
+                  array[i + 1] = array[i]
+                  array[i] = holder
+                  
+                  swap = true
+                }
+              }
             }
+
         }
-        
+        return array
     }
     func insertionSort(_ input: [Int]) -> [Int] {
         var insertionList = input
