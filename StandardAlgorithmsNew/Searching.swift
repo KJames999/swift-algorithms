@@ -8,13 +8,12 @@
 import Foundation
 
 class Searching {
-    func linearSearch() {
+    func linearSearch(_ input: Int) -> Bool {
       var linearFound = false
       let linearList = [3, 8, 17, 25, 41, 54, 69, 80, 92, 99]
-        let linearNumber = linearList.randomElement()
+        let linearNumber = input
       for i in 0...linearList.count - 1 {
         if linearNumber == linearList[i] {
-          print("item is in position \(i+1)")
           linearFound = true
           break
         }
@@ -22,15 +21,18 @@ class Searching {
       if linearFound != true {
         print("Your item is not in the database")
       }
+    return linearFound
     }
-    func binarySearch() {
+    func binarySearch(_ input: Int) -> Bool {
       let binaryList = [3, 8, 17, 25, 41, 54, 69, 80, 92, 99]
+      var binaryFound = false
       var lowerBound = 0
       var upperBound = binaryList.count
-        let binaryNumber = binaryList.randomElement()!
+        let binaryNumber = input
       while lowerBound < upperBound {
         let midpoint = lowerBound + (upperBound - lowerBound) / 2
         if binaryList[midpoint] == binaryNumber {
+          binaryFound = true
           print(midpoint)
           break
         } else if binaryList[midpoint] < binaryNumber {
@@ -39,5 +41,6 @@ class Searching {
           upperBound = midpoint
         }
       }
+    return binaryFound
     }
 }

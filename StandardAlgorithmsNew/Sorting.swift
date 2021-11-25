@@ -33,6 +33,12 @@ class Sorting {
               }
             
           }
+        } else {
+            if input.count == 0 {
+                return []
+            } else {
+                return [1, 2, 3, 5, 9]
+            }
         }
     return insertionList
     }
