@@ -109,4 +109,3 @@ class Sorting {
           return quickSort(less) + equal + quickSort(greater)
         }
 }
-

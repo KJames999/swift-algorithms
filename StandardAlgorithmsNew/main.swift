@@ -7,5 +7,6 @@
 
 import Foundation
 
+let sorting = Sorting()
 
 
